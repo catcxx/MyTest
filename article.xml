@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+
+<article category="xml">
+<title>xml gaishu</title>
+<author>janet</author>
+<email>janet@gmail.com</email>
+<date>20101110</date>
+</article>
+
+<article category="java">
+<title>java gaishu</title>
+<author>janet</author>
+<email>janet@gmail.com</email>
+<date>20101010</date>
+</article>
+
+</articles>

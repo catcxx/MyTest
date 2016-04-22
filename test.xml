@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="gb2312" ?>
+
+ <test>
+ 
+     <dbstore single="false" att="tta">
+ 		 <className dd="00000">com.DBImpl</className>
+         <methodName dd="222">setHashMap</methodName>
+         <methodArgsType>java.util.HashMap</methodArgsType>
+         <driver>com.mysql.jdbc.Driver</driver>
+         <url>jdbc:mysql://localhost:3306/fengzi</url>
+         <username>root</username>
+         <password>root</password>
+         <batchSize>1000</batchSize>
+     </dbstore>
+     
+     <dbstore single="1" att="1">
+         <className>1</className>
+         <methodName>1</methodName>
+         <methodArgsType>j1</methodArgsType>
+         <driver>1</driver>
+         <url>1</url>
+         <username>1</username>
+         <password>1t</password>
+         <batchSize>1</batchSize>
+     </dbstore>
+     
+ </test>
