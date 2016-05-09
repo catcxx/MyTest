@@ -1,11 +1,15 @@
 package cn.cxx.booktest;
-
+/**
+ * fib,using Recursive
+ * @author Administrator
+ *
+ */
 public class RecursiveFib {
 
 	static int count = 0; 
 	public static void main(String[] args) {
 //		RecursiveFib rf = new RecursiveFib();
-		int n=20;
+		int n=3;
 	
 		long start = System.nanoTime();
 //		long res = rf.recursivefib(n);

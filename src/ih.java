@@ -1,5 +1,9 @@
 
-
+/**
+ * simple test on ?:
+ * @author Administrator
+ *
+ */
 public class ih {
 
 	public static void main(String[] args) {

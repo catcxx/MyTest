@@ -1,5 +1,9 @@
 package cn.cxx.booktest;
-
+/**
+ * iterationfib,using dp
+ * @author Administrator
+ *
+ */
 public class Iterationfib {
 
 	public static void main(String[] args) {

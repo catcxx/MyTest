@@ -1,5 +1,9 @@
 package cn.cxx.booktest;
-
+/**
+ * add 1 to n,using Recursive
+ * @author Administrator
+ *
+ */
 public class Recursive1ton {
 
 	public static void main(String[] args) {

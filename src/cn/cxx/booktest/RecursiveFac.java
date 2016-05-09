@@ -1,5 +1,9 @@
 package cn.cxx.booktest;
-
+/**
+ * n*(n-1)...*1,using recursive
+ * @author Administrator
+ *
+ */
 public class RecursiveFac {
 
 	static int count = 0; 

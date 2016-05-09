@@ -1,4 +1,8 @@
-
+/**
+ * StackOfIntegers
+ * @author Administrator
+ *
+ */
 public class StackOfIntegers {
   private int[] elements;
   private int size;
