@@ -12,7 +12,7 @@ public class TestCallableStatement {
 //      "scott", "tiger");
     Connection connection = DriverManager.getConnection(
       "jdbc:mysql://localhost/db_book",
-      "root", "123456");
+      "root", "");
 
     // Create a callable statement
     CallableStatement callableStatement = connection.prepareCall(
