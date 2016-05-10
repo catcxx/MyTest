@@ -8,7 +8,7 @@ public class Iterationfib {
 
 	public static void main(String[] args) {
 		Iterationfib rf = new Iterationfib();
-		int n=20;
+		int n=3;
 		long start = System.nanoTime();
 		long res = rf.iterationfib(n);
 		long end = System.nanoTime();
