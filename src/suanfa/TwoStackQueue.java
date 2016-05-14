@@ -103,7 +103,7 @@ public class TwoStackQueue {
 		tsq.dequeue();
 		tsq.dequeue();
 		
-		tsq.dequeue();
+//		tsq.dequeue();
 	}
 
 }
