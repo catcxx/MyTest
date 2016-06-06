@@ -1,0 +1,37 @@
+
+cat /opt/logs/nginx/access.log |awk '{print $1}'|sort |uniq -c |sort -rn|more
+
+cat /opt/logs/nginx/access.log |grep -ioE "HTTP\/1\.[1|0]\"[[:blank:]][0-9]{3} "
+-i 不区分大小写
+-o 精确输出
+-E 正则
+
+
+
+
+select FUin,count(*) as count,avg(Fscore) as avg from t_score group by Fuin having count >= 2 order by avg desc;
+
+
+
+
+*************
+cat 2015-09-08.log |awk '{print $1}' |sort |uniq -c |sort -rn|more
+
+head 2015-09-08.log |awk '{print $8}'
+
+cat 2015-09-08.log |grep -ioE "HTTP\/1\.[1|0]\"[[:blank:]]GET[[:blank:]][0-9]{3} "
+
+http://www.codeweblog.com/linux-shell相关笔试题-一/
+stat -c %A out   显示权限rwx
+stat -c %a out	 显示权限数字
+
+echo -n "mianwww"; echo "mianwww"
+echo -e "mianwww\c"; echo "mianwww"
+
+http://blog.chinaunix.net/uid-20652643-id-1906281.html		 使用vi编辑器删除文本中所有空行 
+:g/^s*$/d 删除所有空行
+
+git status
+git add ./Example4.scala
+git commit -m “changes”
+git push

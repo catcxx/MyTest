@@ -1,0 +1,115 @@
+linux shell i use
+
+cd - 回到之前的目录
+pwd: Print Working Dir 显示当前所在目录
+绝对路径：“/” 开头
+查看文件类型 file a.txt
+
+tar xzvf 用来解压缩tar.gz压缩文件
+unzip 解压缩
+解壓縮： tar zxvf a.tar.gz
+壓縮 ： tar zcvf a.tar.gz a/
+解压缩：tar jxvf a.tar.bz2
+压缩 ：tar jcvf a.tar.bz2 a/
+
+
+file type有-文件l链接d目录。filemode权限；owner，group，world。
+esc退出插入模式，ZZ保存文件，:q退出但不保存，:q! 强制退出不保存。
+chmod 666 a.txt改变文件模式，使用八进制。chown改变owner。
+
+ps aux|grep bash
+
+
+find .       当前目录所有内容
+find .|grep txt
+find . -type f 文件类型的
+find . -type d 文件夹类型的
+find . |grep txt|wc -l  
+find . -type f -exec ls -l '{}' ';' 找到的文件 通过-exec 参数 直接执行 ls命令
+
+echo hello >a.txt
+echo Hello >b.txt
+
+find . -type f -exec grep hello '{}' ';' -exec 直接执行 grep 查找有hello 内容的文件
+find . -type f -exec grep hello '{}' ';' -print 打印出具体的文件名
+find . -type f -exec grep -n hello '{}' ';' -print 打印出出现的行数
+find . -type f -exec grep -ni hello '{}' ';' -print 不区分大小写
+
+find . -type f -name "*.txt" -size +1000M |wc -l
+
+
+ssh 22端口
+
+if 后面语句执行成功就为真
+对空格敏感
+
+1.指定解析器
+必须在脚本第一行指明解析器：
+#!/usr/bin/env bash
+指定用 bash 去解析下面的语句，也可以指定为 python、ruby。
+
+2.语句即命令
+命令就是语句，语句就是命令。
+脚本中可以直接罗列命令，也可以把命令包裹到函数中，通过呼叫函数名来执行。
+例如：
+say_hello()
+{
+echo "hello"
+}
+
+say_hello
+注意，脚本语句对空格变态的敏感。
+
+3.位置参数
+执行脚本：$ peter.sh a.txt b.txt
+$#：代表一共有几个参数，这里为 2
+$0：代表程序名，即 peter.sh
+$1：代表第一个参数，即 a.txt
+$2：代表第二个参数，即 b.txt
+
+4.脚本不在当前 shell 执行
+在 shell 中执行脚本，并不是在当前 shell 中执行，而是新开一个 shell 执行。
+如果指定在当前 shell 中执行脚本，用 source 命令：source peter.sh。
+
+5.循环控制
+重命名指定目录下文件为文件名.txt
+rename 脚本：
+#!/usr/bin/env bash
+
+cd $1
+echo I am in `pwd`	//倒引号，得到命令的输出
+
+for file in `ls`
+do
+mv $file $file.txt 
+done
+执行脚本：./rename.sh mydir/
+
+
+rename .c  .h   *.c
+把当前目录下的后缀名为.c的文件更改为.h的文件
+
+
+
+6.远程执行
+ssh -t 登录信息 执行语句
+例如：ssh -t peter@happycasts.net 'touch a.txt'
+
+7.确认执行
+echo -n "Want to sync? (y/n)："
+read AAA
+if [ "${AAA:-y}" = "y" ];then
+xxx
+else
+echo Nothing done, bye.
+fi
+
+
+
+
+
+ ln -s source dist        # 建立软连接   删除软链接，原文件会被删除     unlink命令也可以取消软连接
+ ln source dist            # 建立硬连接  删除硬链接，原文件不会被删除
+
+ 硬链接可认为是一个文件拥有两个文件名;而软链接则是
+                    系统新建一个链接文件，此文件指向其所要指的文件
