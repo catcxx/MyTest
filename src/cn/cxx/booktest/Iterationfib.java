@@ -1,6 +1,8 @@
 package cn.cxx.booktest;
+
 /**
  * iterationfib,using dp
+ * 
  * @author Administrator
  *
  */
@@ -8,14 +10,14 @@ public class Iterationfib {
 
 	public static void main(String[] args) {
 		Iterationfib rf = new Iterationfib();
-		int n=3;
+		int n = 3;
 		long start = System.nanoTime();
 		long res = rf.iterationfib(n);
 		long end = System.nanoTime();
-		System.out.println(res+"  time passed :"+(end-start)+"nano");
+		System.out.println(res + "  time passed :" + (end - start) + "nano");
 	}
-	
-	public long iterationfib(int n){
+
+	public long iterationfib(int n) {
 		int f0 = 0;
 		int f1 = 1;
 		int f2 = 1;

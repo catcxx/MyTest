@@ -19,7 +19,8 @@ public class StringDemo1 {
 		private String str = new String(new char[800000]);
 
 		public String getSubString(int begin, int end) {
-			return str.substring(begin, end);//new String(offset+beginIndex,endIndex-beginIndex,value);
+			return str.substring(begin, end);// new
+												// String(offset+beginIndex,endIndex-beginIndex,value);
 		}
 	}
 

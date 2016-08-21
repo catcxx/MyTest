@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "articles")
 public class ArticleData {
 
-	//articles元素下有多个article元素
+	// articles元素下有多个article元素
 	List<Article> article = new ArrayList<Article>();
 
 	public List<Article> getArticle() {
@@ -51,4 +51,3 @@ public class ArticleData {
 		}
 	}
 }
-

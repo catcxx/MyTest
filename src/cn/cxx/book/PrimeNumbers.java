@@ -42,7 +42,6 @@ public class PrimeNumbers {
 			number++;
 		}
 
-		System.out.println("\n" + count + " prime(s) less than or equal to "
-				+ n);
+		System.out.println("\n" + count + " prime(s) less than or equal to " + n);
 	}
 }

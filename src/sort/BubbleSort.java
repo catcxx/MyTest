@@ -24,10 +24,10 @@ public class BubbleSort {
 	/** A test method */
 	public static void main(String[] args) {
 		int[] list = { 2, 3, 2, 5, 6, 1, -2, 3, 14, 12 };
-//		long start = System.currentTimeMillis();
+		// long start = System.currentTimeMillis();
 		long start = System.nanoTime();
 		bubbleSort(list);
-//		long end = System.currentTimeMillis();
+		// long end = System.currentTimeMillis();
 		long end = System.nanoTime();
 		System.out.println("time:" + (end - start));
 		for (int i = 0; i < list.length; i++)

@@ -15,15 +15,13 @@ public class yunsuantest {
 			a /= 2;
 		}
 		System.out.println(a);
-		System.out.println("* & /:" + (System.currentTimeMillis() - start)
-				+ "∫¡√Î");
+		System.out.println("* & /:" + (System.currentTimeMillis() - start) + "∫¡√Î");
 		start = System.currentTimeMillis();
 		for (int i = 0; i < 10000000; i++) {
 			a <<= 1;
 			a >>= 1;
 		}
 		System.out.println(a);
-		System.out.println("weiyunsuan:" + (System.currentTimeMillis() - start)
-				+ "∫¡√Î");
+		System.out.println("weiyunsuan:" + (System.currentTimeMillis() - start) + "∫¡√Î");
 	}
 }

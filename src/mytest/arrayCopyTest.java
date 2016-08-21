@@ -17,11 +17,11 @@ public class arrayCopyTest {
 			array[i] = i;
 		}
 		long start = System.currentTimeMillis();
-		for (int j = 0; j < 1000; j++) {//copy 1000 times
-			System.arraycopy(array, 0, arraydestination, 0, size);// native																
+		for (int j = 0; j < 1000; j++) {// copy 1000 times
+			System.arraycopy(array, 0, arraydestination, 0, size);// native
 		}
 		System.out.println(System.currentTimeMillis() - start);
-//		System.out.println(arraydestination[10000]);
+		// System.out.println(arraydestination[10000]);
 	}
 
 	public static void arrayCopySelf() {
@@ -32,13 +32,13 @@ public class arrayCopyTest {
 			array[i] = i;
 		}
 		long start = System.currentTimeMillis();
-		for (int i = 0; i < 1000; i++) {//copy 1000 times
+		for (int i = 0; i < 1000; i++) {// copy 1000 times
 			for (int j = 0; j < size; j++) {
 				arraydestination[j] = array[j];// 自己实现的方式，采用数组的数据互换方式
 			}
 		}
 		System.out.println(System.currentTimeMillis() - start);
-//		System.out.println(arraydestination[10000]);
+		// System.out.println(arraydestination[10000]);
 	}
 
 	public static void main(String[] args) {

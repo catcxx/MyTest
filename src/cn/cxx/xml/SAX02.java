@@ -12,15 +12,15 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import cn.cxx.xml.Student;
 
-public class SAX02 extends DefaultHandler{
-	private List<Student> students=null;
-	private Student student=null;
-	private String preTag=null; // 标记上一个节点名称
-	
+public class SAX02 extends DefaultHandler {
+	private List<Student> students = null;
+	private Student student = null;
+	private String preTag = null; // 标记上一个节点名称
+
 	@Override
 	public void startDocument() throws SAXException {
 		System.out.println("开始读取学生信息");
-		students=new ArrayList<Student>();
+		students = new ArrayList<Student>();
 	}
 
 	@Override
@@ -29,46 +29,43 @@ public class SAX02 extends DefaultHandler{
 	}
 
 	@Override
-	public void startElement(String uri, String localName, String qName,
-			Attributes attributes) throws SAXException {
-		if("student".equals(qName)){
-			student=new Student();
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		if ("student".equals(qName)) {
+			student = new Student();
 			student.setId(attributes.getValue(0));
 		}
-		preTag=qName;
+		preTag = qName;
 	}
 
 	@Override
-	public void endElement(String uri, String localName, String qName)
-			throws SAXException {
-		if("student".equals(qName)){
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		if ("student".equals(qName)) {
 			students.add(student);
-			student=null;
+			student = null;
 		}
-		preTag=null;
+		preTag = null;
 	}
 
 	@Override
-	public void characters(char[] ch, int start, int length)
-			throws SAXException {
-		if(preTag!=null){
-			String content=new String(ch,start,length);
-			if("name".equals(preTag)){
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		if (preTag != null) {
+			String content = new String(ch, start, length);
+			if ("name".equals(preTag)) {
 				student.setName(content);
-			}else if("sex".equals(preTag)){
+			} else if ("sex".equals(preTag)) {
 				student.setSex(content);
-			}else if("age".equals(preTag)){
+			} else if ("age".equals(preTag)) {
 				student.setAge(Integer.parseInt(content));
 			}
 		}
 	}
 
-	public static void main(String[] args) throws Exception{
-		SAXParserFactory factory=SAXParserFactory.newInstance();
-		SAXParser parser=factory.newSAXParser();
-		SAX02 sax02=new SAX02();
+	public static void main(String[] args) throws Exception {
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		SAXParser parser = factory.newSAXParser();
+		SAX02 sax02 = new SAX02();
 		parser.parse("students.xml", sax02);
-		for(Student s:sax02.students){
+		for (Student s : sax02.students) {
 			System.out.println(s);
 		}
 	}

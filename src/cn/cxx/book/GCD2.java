@@ -22,7 +22,6 @@ public class GCD2 {
 		System.out.print("Enter second integer: ");
 		int n = input.nextInt();
 
-		System.out.println("The greatest common divisor for " + m + " and " + n
-				+ " is " + gcd(m, n));
+		System.out.println("The greatest common divisor for " + m + " and " + n + " is " + gcd(m, n));
 	}
 }

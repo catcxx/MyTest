@@ -8,11 +8,11 @@ public class Partition {
 		Partition p = new Partition();
 		System.out.println(p.partition(s));
 	}
-	
+
 	public List<List<String>> partition(String s) {
-//		List<List<String>> list = new List<String>;
-//		list.add(e);
+		// List<List<String>> list = new List<String>;
+		// list.add(e);
 		return null;
-    }
+	}
 
 }

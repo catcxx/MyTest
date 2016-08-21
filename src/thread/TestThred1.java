@@ -11,7 +11,7 @@ public class TestThred1 {
 		tt1.setPriority(10);
 		tt1.setName("tt1");
 		tt.start();
-		
+
 		tt1.start();
 
 	}
@@ -23,10 +23,10 @@ class ThreadTest1 extends Thread {
 	private static Object obj = new Object();
 
 	public void run() {
-//		synchronized (obj) {
-			for (int i = 0; i < 10; i++) {
-				System.out.println(getName() + " " + count++);
-			}
-//		}
+		// synchronized (obj) {
+		for (int i = 0; i < 10; i++) {
+			System.out.println(getName() + " " + count++);
+		}
+		// }
 	}
 }

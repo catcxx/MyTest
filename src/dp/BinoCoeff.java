@@ -15,8 +15,7 @@ public class BinoCoeff {
 		// int result = Binomial(8, 3);
 		System.out.println("输出8的二项式系数：");
 		for (int i = 0; i <= 8; i++)
-			System.out.println("C" + "(" + 8 + "," + i + ")" + " ———— "
-					+ Binomial(8, i));
+			System.out.println("C" + "(" + 8 + "," + i + ")" + " ———— " + Binomial(8, i));
 	}
 
 	public static int Binomial(int n, int k) {

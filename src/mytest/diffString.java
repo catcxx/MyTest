@@ -1,6 +1,8 @@
 package mytest;
+
 /**
  * 输入两个不同的字符串，编写一个函数找到字符串不同的位置，并返回不同出的下标。
+ * 
  * @author Administrator
  *
  */

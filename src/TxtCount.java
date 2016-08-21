@@ -18,7 +18,7 @@ public class TxtCount {
 			sb.append(str);
 		}
 		System.out.println(sb);
-		//split
+		// split
 		Pattern p = Pattern.compile("hello");
 		Matcher m = p.matcher(sb);
 		int count = 0;

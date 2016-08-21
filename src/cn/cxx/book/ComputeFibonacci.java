@@ -11,8 +11,7 @@ public class ComputeFibonacci {
 		int index = input.nextInt();
 
 		// Find and display the Fibonacci number
-		System.out.println("Fibonacci number at index " + index + " is "
-				+ fib(index));
+		System.out.println("Fibonacci number at index " + index + " is " + fib(index));
 	}
 
 	/** The method for finding the Fibonacci number */

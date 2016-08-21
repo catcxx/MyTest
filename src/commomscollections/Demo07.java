@@ -6,10 +6,9 @@ import org.apache.commons.collections4.bidimap.DualHashBidiMap;
 import org.apache.commons.collections4.bidimap.DualTreeBidiMap;
 
 /**
- 双向Map 要求键与值都不能重复
- BidiMap  inverseBidiMap()
- 1、DualTreeBidiMap :有序
- 2、DualHashBidiMap :无序
+ * 双向Map 要求键与值都不能重复 BidiMap inverseBidiMap() 1、DualTreeBidiMap :有序
+ * 2、DualHashBidiMap :无序
+ * 
  * @author Administrator
  *
  */
@@ -19,42 +18,43 @@ public class Demo07 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//hashMap();
+		// hashMap();
 		treeMap();
 	}
+
 	/**
 	 * 有序的双向Map
 	 */
-	public static void treeMap(){
+	public static void treeMap() {
 		System.out.println("=====有序的双向Map====");
-		BidiMap<String,String> map =new DualTreeBidiMap<String,String>();
+		BidiMap<String, String> map = new DualTreeBidiMap<String, String>();
 		map.put("bj", "bj@test.com");
-		map.put("sxt", "sxt@qq.com");	
-		//遍历查看
-		MapIterator<String,String> it =map.inverseBidiMap().mapIterator();
-		while(it.hasNext()){
-			String key =it.next();
-			String value =it.getValue();
-			System.out.println(key+"-->"+value);
+		map.put("sxt", "sxt@qq.com");
+		// 遍历查看
+		MapIterator<String, String> it = map.inverseBidiMap().mapIterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			String value = it.getValue();
+			System.out.println(key + "-->" + value);
 		}
 	}
 
 	/**
 	 * 无序的双向Map
 	 */
-	public static void hashMap(){
+	public static void hashMap() {
 		System.out.println("=====无序的双向Map====");
-		BidiMap<String,String> map =new DualHashBidiMap<String,String>();
+		BidiMap<String, String> map = new DualHashBidiMap<String, String>();
 		map.put("bj", "bj@test.com");
 		map.put("sxt", "sxt@qq.com");
-		//反转
+		// 反转
 		System.out.println(map.inverseBidiMap().get("sxt@qq.com"));
-		//遍历查看
-		MapIterator<String,String> it =map.inverseBidiMap().mapIterator();
-		while(it.hasNext()){
-			String key =it.next();
-			String value =it.getValue();
-			System.out.println(key+"-->"+value);
+		// 遍历查看
+		MapIterator<String, String> it = map.inverseBidiMap().mapIterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			String value = it.getValue();
+			System.out.println(key + "-->" + value);
 		}
 	}
 

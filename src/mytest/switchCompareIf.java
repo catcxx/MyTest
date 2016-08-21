@@ -1,8 +1,8 @@
 package mytest;
+
 /**
- * 使用一个连续的数组代替 switch 语句，
- * 由于对数据的随机访问非常快，至少好于
- *  switch 的分支判断
+ * 使用一个连续的数组代替 switch 语句， 由于对数据的随机访问非常快，至少好于 switch 的分支判断
+ * 
  * @author Administrator
  *
  */

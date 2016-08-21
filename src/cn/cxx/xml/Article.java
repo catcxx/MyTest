@@ -1,6 +1,5 @@
 package cn.cxx.xml;
 
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -47,4 +46,3 @@ public class Article {
 	}
 
 }
-

@@ -22,6 +22,7 @@ public class maxHeapTest {
 			System.out.println(i + "M is allocated");
 		}
 		System.out.println("Max memory:" + Runtime.getRuntime().freeMemory());
-//		System.out.println("Max memory:" + Runtime.getRuntime().totalMemory());
+		// System.out.println("Max memory:" +
+		// Runtime.getRuntime().totalMemory());
 	}
 }

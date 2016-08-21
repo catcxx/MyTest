@@ -1,4 +1,5 @@
 package lintcode;
+
 /**
  * 给定两个二进制字符串，返回他们的和（用二进制表示）。
  */
@@ -15,10 +16,10 @@ public class AddBinary {
 	}
 
 	public String addBinary(String a, String b) {
-		BigInteger ia = new BigInteger(a, 2);//2进制string转换为BigInteger
+		BigInteger ia = new BigInteger(a, 2);// 2进制string转换为BigInteger
 		BigInteger ib = new BigInteger(b, 2);
 		BigInteger sum = ia.add(ib);
-		String ss = sum.toString(2);//BigInteger转换为2进制string
+		String ss = sum.toString(2);// BigInteger转换为2进制string
 		return ss;
 	}
 }

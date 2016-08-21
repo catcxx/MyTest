@@ -3,27 +3,23 @@ package db;
 import java.sql.*;
 
 public class FindUserTables {
-  public static void main(String[] args)
-      throws SQLException, ClassNotFoundException {
-    // Load the JDBC driver
-    Class.forName("com.mysql.jdbc.Driver");
-    System.out.println("Driver loaded");
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		// Load the JDBC driver
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("Driver loaded");
 
-    // Establish a connection
-    Connection connection = DriverManager.getConnection
-      ("jdbc:mysql://localhost/test", "root", "");
-    System.out.println("Database connected");
+		// Establish a connection
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "");
+		System.out.println("Database connected");
 
-    DatabaseMetaData dbMetaData = connection.getMetaData();
+		DatabaseMetaData dbMetaData = connection.getMetaData();
 
-    ResultSet rsTables = dbMetaData.getTables(null, null, null,
-      new String[] {"TABLE"});
-    System.out.print("User tables: ");
-    while (rsTables.next())
-      System.out.print(rsTables.getString("TABLE_NAME") + " ");
+		ResultSet rsTables = dbMetaData.getTables(null, null, null, new String[] { "TABLE" });
+		System.out.print("User tables: ");
+		while (rsTables.next())
+			System.out.print(rsTables.getString("TABLE_NAME") + " ");
 
-    // Close the connection
-    connection.close();
-  }
+		// Close the connection
+		connection.close();
+	}
 }
-

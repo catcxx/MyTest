@@ -4,35 +4,35 @@ import javax.swing.*;
 import java.awt.Graphics;
 
 public class TestPaintComponent extends JFrame {
-  public TestPaintComponent() {
-    add(new NewPanel());
-  }
+	public TestPaintComponent() {
+		add(new NewPanel());
+	}
 
-  public static void main(String[] args) {
-    TestPaintComponent frame = new TestPaintComponent();
-    TestPaintComponent frame1 = new TestPaintComponent();
-    
-    frame.setTitle("TestPaintComponent");
-//    frame1.setTitle("111111111");
-    
-    frame.setSize(200, 100);
-//    frame1.setSize(400, 100);
-    
-    frame.setLocationRelativeTo(null); // Center the frame   
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
-    frame.setVisible(true);    
-//    frame1.setVisible(true);  ////
-  }
+	public static void main(String[] args) {
+		TestPaintComponent frame = new TestPaintComponent();
+		TestPaintComponent frame1 = new TestPaintComponent();
+
+		frame.setTitle("TestPaintComponent");
+		// frame1.setTitle("111111111");
+
+		frame.setSize(200, 100);
+		// frame1.setSize(400, 100);
+
+		frame.setLocationRelativeTo(null); // Center the frame
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.setVisible(true);
+		// frame1.setVisible(true); ////
+	}
 }
 
-class NewPanel extends JPanel { 
-  protected void paintComponent(Graphics g) {
-    super.paintComponent(g);
-    g.drawLine(0, 0, 50, 50);
-    g.drawString("Banner", 0, 40);
-//    g.create(10, 10, 100, 100);
-    g.draw3DRect(10, 10, 100, 100, true);
-    g.fill3DRect(10, 10, 80, 100, true);
-  }
+class NewPanel extends JPanel {
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.drawLine(0, 0, 50, 50);
+		g.drawString("Banner", 0, 40);
+		// g.create(10, 10, 100, 100);
+		g.draw3DRect(10, 10, 100, 100, true);
+		g.fill3DRect(10, 10, 80, 100, true);
+	}
 }

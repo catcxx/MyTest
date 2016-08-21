@@ -1,4 +1,5 @@
 package suanfa;
+
 /**
  * 两个栈实现一个队列
  */
@@ -11,6 +12,7 @@ public class TwoStackQueue {
 
 	/**
 	 * queue size
+	 * 
 	 * @return
 	 */
 	public int size() {
@@ -19,6 +21,7 @@ public class TwoStackQueue {
 
 	/**
 	 * enqueue
+	 * 
 	 * @param node
 	 */
 	public void enqueue(int node) {
@@ -34,10 +37,13 @@ public class TwoStackQueue {
 
 	/**
 	 * dequeue
+	 * 
 	 * @return
 	 */
 	public int dequeue() {
-		if(stack1.size()+stack2.size()<1){System.out.println("empty");}
+		if (stack1.size() + stack2.size() < 1) {
+			System.out.println("empty");
+		}
 		if (stack2.empty()) {
 			while (!stack1.empty()) {
 				stack2.push(stack1.pop());
@@ -45,13 +51,16 @@ public class TwoStackQueue {
 		}
 		return stack2.pop();
 	}
-	
+
 	/**
 	 * queue first
+	 * 
 	 * @return
 	 */
-	public int first(){
-		if(stack1.size()+stack2.size()<1){System.out.println("empty");}
+	public int first() {
+		if (stack1.size() + stack2.size() < 1) {
+			System.out.println("empty");
+		}
 		if (stack2.empty()) {
 			while (!stack1.empty()) {
 				stack2.push(stack1.pop());
@@ -59,13 +68,16 @@ public class TwoStackQueue {
 		}
 		return stack2.peek();
 	}
-	
+
 	/**
 	 * queue last
+	 * 
 	 * @return
 	 */
-	public int last(){
-		if(stack1.size()+stack2.size()<1){System.out.println("empty");}
+	public int last() {
+		if (stack1.size() + stack2.size() < 1) {
+			System.out.println("empty");
+		}
 		while (!stack2.empty()) {
 			stack1.push(stack2.pop());
 		}
@@ -82,28 +94,28 @@ public class TwoStackQueue {
 		TwoStackQueue tsq = new TwoStackQueue();
 		tsq.enqueue(1);
 		tsq.enqueue(2);
-		System.out.println("first: "+tsq.first());
-		System.out.println("last: "+tsq.last());
+		System.out.println("first: " + tsq.first());
+		System.out.println("last: " + tsq.last());
 		tsq.enqueue(3);
 		tsq.enqueue(4);
-		
-		System.out.println("first: "+tsq.first());
-		System.out.println("last: "+tsq.last());
-		System.out.println("dequeue: "+tsq.dequeue());
-		System.out.println("dequeue: "+tsq.dequeue());
-		System.out.println("first: "+tsq.first());
-		System.out.println("last: "+tsq.last());
+
+		System.out.println("first: " + tsq.first());
+		System.out.println("last: " + tsq.last());
+		System.out.println("dequeue: " + tsq.dequeue());
+		System.out.println("dequeue: " + tsq.dequeue());
+		System.out.println("first: " + tsq.first());
+		System.out.println("last: " + tsq.last());
 		tsq.enqueue(5);
 		tsq.enqueue(6);
-		
-		System.out.println("first: "+tsq.first());
-		System.out.println("last: "+tsq.last());
+
+		System.out.println("first: " + tsq.first());
+		System.out.println("last: " + tsq.last());
 		tsq.dequeue();
 		tsq.dequeue();
 		tsq.dequeue();
 		tsq.dequeue();
-		
-//		tsq.dequeue();
+
+		// tsq.dequeue();
 	}
 
 }

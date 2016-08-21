@@ -13,8 +13,7 @@ public class CoinsChange {
 	 * @param coinsUsed
 	 *            :保存面值为i的纸币找零所需的最小硬币数
 	 */
-	public static void makeChange(int[] values, int valueKinds, int money,
-			int[] coinsUsed) {
+	public static void makeChange(int[] values, int valueKinds, int money, int[] coinsUsed) {
 
 		coinsUsed[0] = 0;
 		// 对每一分钱都找零，即保存子问题的解以备用，即填表
@@ -36,8 +35,7 @@ public class CoinsChange {
 			// 保存最小硬币数
 			coinsUsed[cents] = minCoins;
 
-			System.out.println("面值为 " + (cents) + " 的最小硬币数 : "
-					+ coinsUsed[cents]);
+			System.out.println("面值为 " + (cents) + " 的最小硬币数 : " + coinsUsed[cents]);
 		}
 	}
 

@@ -28,8 +28,7 @@ public class Pairing {
 				target = target - items[i];
 
 			} else if (target < items[i]) { // 目标总量小于选择的数据项
-				 System.out.println(result + " --target is " + target + "--"
-				 + items[i] + " is too big");
+				System.out.println(result + " --target is " + target + "--" + items[i] + " is too big");
 
 			} else { // 目标重量等于选择的数据项
 				result = result + " " + String.valueOf(items[i]);

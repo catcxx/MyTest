@@ -16,8 +16,7 @@ public class testgps2 {
 		String str0 = "D:\\desk\\";
 		Set<String> set = new HashSet<String>();
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(
-				new FileInputStream(f1), "UTF-8"));// 构造一个BufferedReader类来读取文件
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f1), "UTF-8"));// 构造一个BufferedReader类来读取文件
 
 		int countline = 0;
 		String result = " ";
@@ -27,15 +26,13 @@ public class testgps2 {
 			String str1 = res[1];
 			if (!set.contains(str1)) {
 				fileWriter = new FileWriter(str0 + str1 + ".txt");
-				fileWriter.write(res[1] + "," + res[2] + "," + res[3] + ","
-						+ res[4] + "," + res[5] + "," + res[6] + "," + res[7]
-						+ "\n");
+				fileWriter.write(res[1] + "," + res[2] + "," + res[3] + "," + res[4] + "," + res[5] + "," + res[6] + ","
+						+ res[7] + "\n");
 				set.add(str1);
 				countline++;
 			} else {
-				fileWriter.write(res[1] + "," + res[2] + "," + res[3] + ","
-						+ res[4] + "," + res[5] + "," + res[6] + "," + res[7]
-						+ "\n");
+				fileWriter.write(res[1] + "," + res[2] + "," + res[3] + "," + res[4] + "," + res[5] + "," + res[6] + ","
+						+ res[7] + "\n");
 				countline++;
 			}
 		}

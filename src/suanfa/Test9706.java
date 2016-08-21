@@ -47,7 +47,7 @@ public class Test9706 {
 	// return count;
 	// }
 
-	public int[] test9706( ArrayList<String> al) {
+	public int[] test9706(ArrayList<String> al) {
 		int[] count = new int[al.size()];
 		StringBuilder[] sb = new StringBuilder[al.size()];
 		for (int i = 0; i < al.size(); i++) {

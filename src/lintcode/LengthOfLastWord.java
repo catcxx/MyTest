@@ -11,11 +11,11 @@ public class LengthOfLastWord {
 	}
 
 	public int lengthOfLastWord(String s) {
-//		if (s.endsWith(" ")) {
-//			return 0;
-//		}
+		// if (s.endsWith(" ")) {
+		// return 0;
+		// }
 		String ss[] = s.split(" ");
-		
+
 		int slenth = ss[ss.length - 1].length();
 		return slenth;
 	}

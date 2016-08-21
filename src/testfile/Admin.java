@@ -26,7 +26,7 @@ public class Admin {
 				e.printStackTrace();
 			}
 		}
-		
+
 		String tmp = "aa" + 1;
 		System.out.println((String) tmp);
 	}

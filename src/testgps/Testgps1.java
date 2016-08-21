@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 
-
 public class Testgps1 {
 
 	public static void main(String[] args) throws IOException, ParseException {
@@ -25,9 +24,8 @@ public class Testgps1 {
 					// System.out.println("你要的结果:" +sb);
 					long res3 = Long.parseLong(sb);
 					if (res3 > 150000 & res3 < 173000) {
-						fileWriter.write(res[1] + "," + res[2] + "," + res[3]
-								+ "," + res[4] + "," + res[5] + "," + res[6]
-								+ "," + res[7] + "," + res[8] + "\r\n");
+						fileWriter.write(res[1] + "," + res[2] + "," + res[3] + "," + res[4] + "," + res[5] + ","
+								+ res[6] + "," + res[7] + "," + res[8] + "\r\n");
 					}
 				}
 			} else {
@@ -36,7 +34,7 @@ public class Testgps1 {
 
 			countline++;
 		}
-		System.out.println("done!" + "\n"+"lines:"+countline);
+		System.out.println("done!" + "\n" + "lines:" + countline);
 		fileWriter.close();
 	}
 

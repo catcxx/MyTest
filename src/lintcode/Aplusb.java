@@ -1,6 +1,8 @@
 package lintcode;
+
 /**
  * 给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符
+ * 
  * @author Administrator
  *
  */
@@ -14,7 +16,7 @@ public class Aplusb {
 	}
 
 	public int aplusb(int a, int b) {
-	
+
 		// int sum = a - (-b);
 		// return sum;
 

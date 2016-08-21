@@ -10,8 +10,8 @@ package lintcode;
  */
 public class NumIslands {
 	public static void main(String args[]) {
-		int[][] nums = { { 1, 1, 0, 0, 0 }, { 0, 1, 0, 0, 1 },
-				{ 0, 0, 0, 1, 1 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 1 } };
+		int[][] nums = { { 1, 1, 0, 0, 0 }, { 0, 1, 0, 0, 1 }, { 0, 0, 0, 1, 1 }, { 0, 0, 0, 0, 0 },
+				{ 0, 0, 0, 0, 1 } };
 		NumIslands nl = new NumIslands();
 
 		System.out.print(nl.numIslands(nums));

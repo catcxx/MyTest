@@ -28,9 +28,8 @@ public class Demo01 {
 	public static void main(String[] args) {
 		equal();
 		notNull();
-//		unique();
-//		selfPre();
-		
+		// unique();
+		// selfPre();
 
 	}
 
@@ -56,7 +55,7 @@ public class Demo01 {
 		list.add(null);
 		list.add("bj");
 	}
-	
+
 	/**
 	 * ÅÐ¶ÏÎ¨Ò»
 	 */

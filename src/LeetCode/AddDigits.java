@@ -7,11 +7,10 @@ public class AddDigits {
 		System.out.println(tz.addDigits(num));
 	}
 
-//	  public int addDigits(int num) {  //niubi
-//	        return 1 + (num-1) % 9;  
-//	    }  
-	
-	
+	// public int addDigits(int num) { //niubi
+	// return 1 + (num-1) % 9;
+	// }
+
 	public int addDigits(int num) {
 
 		int result = num;

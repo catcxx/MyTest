@@ -51,8 +51,7 @@ public class EightQueensNoRec {
 		int row = 0, col;
 		while (true) {
 			for (col = p + 1; col < squares; col++) {
-				if (rows[row] == AVAILABLE && column[col] == AVAILABLE
-						&& leftDiagonal[row + col] == AVAILABLE
+				if (rows[row] == AVAILABLE && column[col] == AVAILABLE && leftDiagonal[row + col] == AVAILABLE
 						&& rightDiagonal[row - col + norm] == AVAILABLE) {
 					break;
 				}

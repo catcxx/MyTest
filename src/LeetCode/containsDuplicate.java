@@ -8,25 +8,24 @@ public class containsDuplicate {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		containsDuplicate cd = new containsDuplicate();
-		int[] nums = {1,2,1,4};
-		
+		int[] nums = { 1, 2, 1, 4 };
+
 		System.out.println(cd.containsDuplicate(nums));
 	}
-	
-	
-	 public boolean containsDuplicate(int[] nums) {
+
+	public boolean containsDuplicate(int[] nums) {
 		Set<Integer> set = new HashSet<Integer>();
 		int count = nums.length;
-		for(int i=0;i<nums.length;i++) {
+		for (int i = 0; i < nums.length; i++) {
 			set.add(nums[i]);
 		}
-//		System.out.println("///////"+set);
-		if(set.size()<count){
-		return true;
+		// System.out.println("///////"+set);
+		if (set.size() < count) {
+			return true;
 		}
-		
+
 		return false;
-	        
-	    }
+
+	}
 
 }

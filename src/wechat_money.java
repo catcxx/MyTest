@@ -2,7 +2,7 @@
  * 微信红包分配算法
  * 
  * @author Michael282694
- * */
+ */
 public class wechat_money {
 
 	public static void main(String[] args) {
@@ -18,15 +18,11 @@ public class wechat_money {
 
 		for (int i = 0; i < total_people - 1; i++) {
 			int j = i + 1;
-			double safe_money = (total_money - (total_people - j) * min_money)
-					/ (total_people - j);
-			double tmp_money = (Math.random()
-					* (safe_money * 100 - min_money * 100) + min_money * 100) / 100;
+			double safe_money = (total_money - (total_people - j) * min_money) / (total_people - j);
+			double tmp_money = (Math.random() * (safe_money * 100 - min_money * 100) + min_money * 100) / 100;
 			total_money = total_money - tmp_money;
-			System.out.format("第 %d 个红包： %.2f 元，剩下： %.2f 元\n", j, tmp_money,
-					total_money);
+			System.out.format("第 %d 个红包： %.2f 元，剩下： %.2f 元\n", j, tmp_money, total_money);
 		}
-		System.out.format("第 %d 个红包： %.2f 元，剩下： 0 元\n", total_people,
-				total_money);
+		System.out.format("第 %d 个红包： %.2f 元，剩下： 0 元\n", total_people, total_money);
 	}
 }
